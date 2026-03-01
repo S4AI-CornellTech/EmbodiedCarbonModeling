@@ -52,6 +52,7 @@ materials:
 # 6 x metal/bronze as Connectors
   connector.TP1: # TP1,TP2,TP3,TP4,TP5,TP6
     category: bronze
+    type: bronze
     weight: 0.000122328 kg
     quantity: 6
 
