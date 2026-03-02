@@ -1,5 +1,320 @@
 name: BOM for RPi_4_BoM_Official
 description: Auto-generated from RPi_4_BoM_Official.xlsx
-silicon: {}
-materials: {}
-passives: {}
+silicon:
+  ic_001.LPDDR4__1GB:
+    process: 45nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: coal
+  ic_002.BCM2711ZPKFSB06C0TT:
+    process: 45nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: coal
+  ic_003.SC0182:
+    process: 45nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: coal
+  ic_004.RT9742SNGV:
+    process: 45nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: coal
+  ic_005.SC0243:
+    process: 45nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: coal
+  ic_006.SC0263:
+    process: 45nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: coal
+  ic_007.AP2552W6-7:
+    process: 45nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: coal
+  ic_008.SC0591:
+    process: 45nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: coal
+  ic_009.FPF1320UCX:
+    process: 45nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: coal
+  ic_010.SKY13351-378LF:
+    process: 45nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: coal
+materials:
+  material.solder_001.Solder_Fusible_metal_alloy:
+    category: enclosure
+    quantity: 1
+  pcb.pcb_001.Motherboard_integrated_wiring:
+    category: pcb
+    quantity: 1
+  material.shield_001.SHJJ-031303:
+    category: tin
+    quantity: 1
+passives:
+  connector.con_001.VL805-Q6_T_A1:
+    category: connector
+    quantity: 1
+  connector.con_002.THD-20-R:
+    category: connector
+    quantity: 1
+  other.other_001.CG9052AMT:
+    category: other
+    quantity: 1
+  connector.con_003.FP155PL-15SR01:
+    category: connector
+    quantity: 2
+  connector.con_004.TRJG0926HENL:
+    category: connector
+    quantity: 1
+  connector.con_005.UBAF30-D2011:
+    category: connector
+    quantity: 1
+  connector.con_006.690-008-221-904_REV9:
+    category: connector
+    quantity: 1
+  diode.dio_001.CDDFN10-3324P-13:
+    category: diode
+    quantity: 2
+  diode.dio_002.SML-A12M8TT86N:
+    category: diode
+    quantity: 1
+  connector.con_007.JHP-3220-A:
+    category: connector
+    quantity: 1
+  connector.con_008.151-604-425-761:
+    category: connector
+    quantity: 1
+  diode.dio_003.DIODE_TVS_SMBJ_5.0A:
+    category: diode
+    quantity: 1
+  diode.dio_004.DSS13UTR:
+    category: diode
+    quantity: 1
+  other.other_002.PI4IOE5V6408ZTAEX-13:
+    category: other
+    quantity: 1
+  capacitor.cap_001.0.22MF:
+    category: capacitor
+    quantity: 34
+  other.other_003.W25X40CLUXIG:
+    category: other
+    quantity: 1
+  diode.dio_005.SML-A12U8TT86Q:
+    category: diode
+    quantity: 1
+  capacitor.cap_002.CAP_SP-Cap_100MF_6.3v_15mR_ESR:
+    category: capacitor
+    quantity: 1
+  other.other_004.NC7WZ16P6X:
+    category: other
+    quantity: 1
+  diode.dio_006.10000:
+    category: diode
+    quantity: 1
+  connector.con_009.JTHDD-19FD5A:
+    category: connector
+    quantity: 2
+  other.other_005.X25M000000S305:
+    category: other
+    quantity: 2
+  diode.dio_007.BAT54XV2T5G:
+    category: diode
+    quantity: 1
+  inductor.ind_001.SRP2512P-R47MH:
+    category: inductor
+    quantity: 4
+  other.other_006.CSP-USC16-R2:
+    category: other
+    quantity: 1
+  connector.con_010.1040310811:
+    category: connector
+    quantity: 1
+  capacitor.cap_003.0.25pF:
+    category: capacitor
+    quantity: 7
+  capacitor.cap_004.GRM0335C1E100JA01D:
+    category: capacitor
+    quantity: 6
+  other.other_007.X54M000000S303:
+    category: other
+    quantity: 1
+  other.other_008.X37M400000S002:
+    category: other
+    quantity: 1
+  other.other_009.DMG1012T:
+    category: other
+    quantity: 6
+  capacitor.cap_005.CAP_CER_22pF_0603_25V5%:
+    category: capacitor
+    quantity: 4
+  capacitor.cap_006.0603:
+    category: capacitor
+    quantity: 4
+  resistor.res_001.0603:
+    category: resistor
+    quantity: 4
+  other.other_010.SC0264:
+    category: other
+    quantity: 2
+  other.other_011.DPX165950DT-8048A1:
+    category: other
+    quantity: 1
+  diode.dio_008.HDMI05-CL02F3:
+    category: diode
+    quantity: 2
+  inductor.ind_002.SMD:
+    category: inductor
+    quantity: 2
+  capacitor.cap_007.0603:
+    category: capacitor
+    quantity: 1
+  capacitor.cap_008.0.25pF:
+    category: capacitor
+    quantity: 1
+  capacitor.cap_009.0.05pF:
+    category: capacitor
+    quantity: 1
+  capacitor.cap_010.0603:
+    category: capacitor
+    quantity: 1
+  capacitor.cap_011.0.05pF:
+    category: capacitor
+    quantity: 1
+  capacitor.cap_012.0.05pF:
+    category: capacitor
+    quantity: 1
+  capacitor.cap_013.0.05pF:
+    category: capacitor
+    quantity: 1
+  capacitor.cap_014.0.05pF:
+    category: capacitor
+    quantity: 1
+  capacitor.cap_015.0603:
+    category: capacitor
+    quantity: 1
+  resistor.res_002.1608:
+    category: resistor
+    quantity: 1
+  resistor.res_003.1005:
+    category: resistor
+    quantity: 15
+  resistor.res_004.0603:
+    category: resistor
+    quantity: 5
+  resistor.res_005.0603:
+    category: resistor
+    quantity: 4
+  resistor.res_006.0603:
+    category: resistor
+    quantity: 3
+  other.other_012.1608:
+    category: other
+    quantity: 1
+  inductor.ind_003.0603:
+    category: inductor
+    quantity: 1
+  inductor.ind_004.0603:
+    category: inductor
+    quantity: 1
+  inductor.ind_005.0603:
+    category: inductor
+    quantity: 1
+  inductor.ind_006.LQP03TN3N6B02D:
+    category: inductor
+    quantity: 1
+  resistor.res_007.0603:
+    category: resistor
+    quantity: 3
+  resistor.res_008.0603:
+    category: resistor
+    quantity: 3
+  resistor.res_009.0603:
+    category: resistor
+    quantity: 3
+  resistor.res_010.1005:
+    category: resistor
+    quantity: 7
+  resistor.res_011.1005:
+    category: resistor
+    quantity: 7
+  inductor.ind_007.BLM15AG221SN1D:
+    category: inductor
+    quantity: 6
+  resistor.res_012.0603:
+    category: resistor
+    quantity: 2
+  connector.con_011.0603:
+    category: connector
+    quantity: 2
+  inductor.ind_008.SMD:
+    category: inductor
+    quantity: 4
+  resistor.res_013.1005:
+    category: resistor
+    quantity: 3
+  resistor.res_014.0603:
+    category: resistor
+    quantity: 1
+  resistor.res_015.1005:
+    category: resistor
+    quantity: 2
+  resistor.res_016.1005:
+    category: resistor
+    quantity: 2
+  resistor.res_017.1005:
+    category: resistor
+    quantity: 2
+  resistor.res_018.1005:
+    category: resistor
+    quantity: 2
+  resistor.res_019.1005:
+    category: resistor
+    quantity: 1
+  resistor.res_020.0.063W:
+    category: resistor
+    quantity: 1
+  resistor.res_021.1005:
+    category: resistor
+    quantity: 1
+  capacitor.cap_016.CAP_CERAMIC_0.1MF_X5R_0603:
+    category: capacitor
+    quantity: 75
+  capacitor.cap_017.1608:
+    category: capacitor
+    quantity: 19
+  capacitor.cap_018.CAP_CERAMIC_47uF_X5R_6.3V_2012:
+    category: capacitor
+    quantity: 9
+  capacitor.cap_019.CAP_CERAMIC_10MF_6.3v_X5R_1608:
+    category: capacitor
+    quantity: 9
+  capacitor.cap_020.GRM155R60J475ME47J:
+    category: capacitor
+    quantity: 21
+  capacitor.cap_021.CAP_CER_0603_27pF_5%_25V:
+    category: capacitor
+    quantity: 3
+  capacitor.cap_022.CAP_CERAMIC_2.2MF_X5R_1005_6.3v_:
+    category: capacitor
+    quantity: 7

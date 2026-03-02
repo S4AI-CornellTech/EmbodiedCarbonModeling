@@ -45,10 +45,11 @@ materials:
     layers: 2
     thickness: 1 mm
 # 1 x metal /Tin 
-  SH1.SHIJ-031306:
+  SH1.SHJJ-031306:
     category: tin
     type: tin
     weight: 0.00149124 kg
+    quantity: 1
 
 # 6 x metal/bronze as Connectors
   connector.TP1.SQ1P5MM: # TP1,TP2,TP3,TP4,TP5,TP6
@@ -69,7 +70,7 @@ passives:
     type: "0603"
     quantity: 13
     
-  capacitor.C12.2p2u:  # C12,C13,C14,C18,C246,C248
+  capacitor.C12.2.2u:  # C12,C13,C14,C18,C246,C248
     category: capacitor
     type: "0402"
     quantity: 6
@@ -79,7 +80,7 @@ passives:
     type: "0603"
     quantity: 2
   
-  capacitor.C240.4p7u: # C240,C241,C243
+  capacitor.C240.4.7u: # C240,C241,C243
     category: capacitor
     type: "0402"
     quantity: 3 
@@ -104,16 +105,17 @@ passives:
     type: "0603"
     quantity: 2
   
-  capacitor.C260.0p2pF: # C260,C271
+  capacitor.C260.0.2pF: # C260,C271
     category: capacitor
     type: "0402"
+    quantity: 2
   
-  capacitor.C261.0p36pF: # C261
+  capacitor.C261.0.36pF: # C261
     category: capacitor
     type: "0402"
     quantity: 1
 
-  capacitor.C262.0p3pF: # C262
+  capacitor.C262.0.3pF: # C262
     category: capacitor
     type: "0402"
     quantity: 1  
@@ -143,7 +145,7 @@ passives:
     weight: 1.40047E-05 kg
     quantity: 1
 
-  active.X2.27p12MHz:  # active component https://www.mouser.com/ProductDetail/Epson-Timing/FA-118T-27.1200MD50Z-K3?qs=f9yNj16SXrL30ivkOSycAA%3D%3D
+  active.X2.37.4MHz:  # active component https://www.mouser.com/ProductDetail/Epson-Timing/FA-118T-27.1200MD50Z-K3?qs=f9yNj16SXrL30ivkOSycAA%3D%3D
     category: active
     type: active_generic
     weight: 0.000150763 kg
@@ -163,7 +165,7 @@ passives:
       quantity: 1
 
 # Active components 
-  active.FL1.LFB21245CG7D022:
+  active.FL1.LFB212G45CG7D227:
     category: active
     type: active_generic
     weight: 7.99457E-06 kg
@@ -236,7 +238,7 @@ passives:
       quantity: 1 
 
 # 3 x Connectors
-  connector.J0.CON_PICO_40W-not:
+  connector.J0.CON_PICO_40W-notfitted:
     category: connector
     weight: 0.000712792 kg
     type: peripheral
@@ -248,7 +250,7 @@ passives:
     type: peripheral
     quantity: 1
 
-  connector.J2.CON_PICO_3W-not:
+  connector.J2.CON_PICO_3W-notfitted:
     category: connector
     weight: 5.34594E-05 kg
     type: peripheral
@@ -261,12 +263,12 @@ passives:
     type: weight_based
     quantity: 1
 
-  inductor.L8.2p2u:
+  inductor.L8.2.2u:
     category: inductor
     type: "0603"
     quantity: 1
 
-  inductor.L9.4p7n:
+  inductor.L9.4.7n:
     category: inductor
     type: "0603"
     quantity: 1
