@@ -263,9 +263,11 @@ passives:
     quantity: 2
     type: inductor_multilayer
     weight: 1.8e-05 kg
-  other.other_001.DPX165950DT-8048A1:
+  other.DPX165950DT-8048A1:
     category: other
     quantity: 1
+    type: passive_generic
+    weight: 2.4e-06 kg
   diode.dio_009:
     category: diode
     type: glass_smd
