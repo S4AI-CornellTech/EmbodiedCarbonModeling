@@ -394,6 +394,10 @@ class ACTModel:
 
         export_data.update(result_by_device=result_by_dev_dict)
 
+        def _float_representer(dumper, value):
+            return dumper.represent_scalar("tag:yaml.org,2002:float", f"{value:.6g}")
+
+        yaml.add_representer(float, _float_representer)
         with open(export_file, "w") as handle:
             yaml.dump(export_data, handle)
         log.info(f"ACT results exported to: {export_file}")

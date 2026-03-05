@@ -255,6 +255,7 @@ def read_excel_bom_table(excel_file: Path) -> list[dict[str, Any]]:
                 "value": _as_str(value_cell),
                 # Prefer the ACT-specific category column when available
                 "category": _as_str(cat_act_cell or cat_cell),
+                "category_mfr": _as_str(_cell(r, "category_mfr")),
                 "description": _as_str(desc_cell),
                 # Extended fields
                 "weight_kg": _to_float(_cell(r, "weight_kg")),
@@ -703,7 +704,18 @@ def build_generic_bom(entries: list[dict[str, Any]], *, stem: str, excel_name: s
         # ── Passives ─────────────────────────────────────────────────────────────
         if is_connector:
             key = _passive_key("connector", "con", tags)
-            spec = {"category": "connector", "type": "generic", "quantity": qty}
+            _peripheral_kw = (
+                "usb", "hdmi", "ethernet", "magjack", "rj45",
+                "headphone", "audio", "trs", "sd card", "microsd", "micro sd", "usd",
+                "displayport", "sata", "thunderbolt",
+            )
+            _mfr_cat_lower = (e.get("category_mfr") or "").lower()
+            _is_peripheral_conn = any(
+                kw in desc_lower or kw in _mfr_cat_lower
+                for kw in _peripheral_kw
+            )
+            conn_type = "peripheral" if _is_peripheral_conn else "generic"
+            spec = {"category": "connector", "type": conn_type, "quantity": qty}
             if weight_kg is not None and weight_kg > 0:
                 spec["weight"] = _fmt_weight(weight_kg)
             bom["passives"][key] = spec

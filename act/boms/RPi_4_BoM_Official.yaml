@@ -132,17 +132,17 @@ passives:
     weight: 0.0005 kg
   connector.con_003:
     category: connector
-    type: generic
+    type: peripheral
     quantity: 1
     weight: 0.0061 kg
   connector.con_004:
     category: connector
-    type: generic
+    type: peripheral
     quantity: 1
     weight: 0.0055 kg
   connector.con_005:
     category: connector
-    type: generic
+    type: peripheral
     quantity: 1
     weight: 0.0049 kg
   diode.dio_001:
@@ -157,7 +157,7 @@ passives:
     weight: 0.000119 kg
   connector.con_006:
     category: connector
-    type: generic
+    type: peripheral
     quantity: 1
     weight: 0.003 kg
   connector.con_007:
@@ -195,7 +195,7 @@ passives:
     weight: 3e-05 kg
   connector.con_008:
     category: connector
-    type: generic
+    type: peripheral
     quantity: 2
     weight: 0.0004 kg
   other.X25M000000S305:
@@ -215,12 +215,12 @@ passives:
     weight: 2.9e-05 kg
   connector.con_009:
     category: connector
-    type: generic
+    type: peripheral
     quantity: 1
     weight: 0.0005 kg
   connector.con_010:
     category: connector
-    type: generic
+    type: peripheral
     quantity: 1
     weight: 0.00047 kg
   capacitor.cap_003:
