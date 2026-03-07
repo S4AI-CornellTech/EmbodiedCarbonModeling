@@ -21,16 +21,16 @@ tec: 5567 MJ / kg
 # Converted to per-capacitor values based on typical package weights
 # =============================================================================
 # Package 0201 (kg CO2e)
-0201: 0.000036 kg
-  
+"0201": 0.000036 kg
+
 # Package 0402 (kg CO2e)
-0402: 0.000146 kg
-  
+"0402": 0.000146 kg
+
 # Package 0603 (kg CO2e)
-0603: 0.000611 kg
-  
+"0603": 0.000611 kg
+
 # Package 0805 (kg CO2e)
-0805: 0.001067 kg
+"0805": 0.001067 kg
 
 # Note: Package weights are typical values and may vary by manufacturer
 # Source for Ecoinvent factor: https://dl.acm.org/doi/10.1145/3643561 (Table2)
