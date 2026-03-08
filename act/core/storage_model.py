@@ -100,4 +100,4 @@ class StorageModel:
         self._check_process(process)
         return Carbon(
             capacity * self.get_cpg(process, fab_yield), SourceType.FABRICATION
-        ) + Carbon(n_ics * CARBON_PER_IC_PACKAGE, SourceType.PACKAGING)
+        )
