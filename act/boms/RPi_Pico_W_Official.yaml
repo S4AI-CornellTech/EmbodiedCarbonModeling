@@ -3,10 +3,10 @@ description: Materials model for RPi Pico W Official,
   based on datasheet provided by Raspberry Pi
 silicon:
  # RPi Pico W Official system with 6 ICs, 1 PCB, 41 Capacitors, 2 Diodes, 2 Ferite Beads, 1 I/O Expander Interface, 9 Connectors, 3 Inductors, 1 Semiconductor, 20 Resistors, 1 Switch, 1 Shield Can Interface
- # Datasheet: https://pip-assets.raspberrypi.com/categories/610-raspberry-pi-pico/documents/RP-008307-DS-1-pico-datasheet.pdf?disposition=inline
+ # BoM was directly given by Raspberry Pi
   # 6 x ICs
   U1.RP2040:
-    area: 0.271 mm2
+    area: 2.71 mm2
     process: 45nm 
     n_ics: 1
     fab_yield: 0.875
@@ -14,23 +14,21 @@ silicon:
     fab_ci: coal
 
   U2.RT6154AGQW:
-    area: 0.253 mm2
-    process: 45nm  
+    area: 2.53 mm2
+    process: 130nm  
     n_ics: 1
     fab_yield: 0.875
     gpa: 95
     fab_ci: coal
 
-  U3.W25Q16JVUXIQ: # to be confirmed 
-    area: 0.253 mm2
-    process: 45nm  
+  U3.W25Q16JVUXIQ: # Serial NOR Flash, QSPI, 16MBit, 8-pin USON 2x3mm 133MHz
+    model: flash
+    process: nand_30nm
     n_ics: 1
-    fab_yield: 0.875
-    gpa: 95
-    fab_ci: coal
+    capacity: 2 GB
   
   U19.CYW43439KUBG: 
-    area: 0.97349 mm2
+    area: 9.7349 mm2
     process: 130nm  
     n_ics: 1
     fab_yield: 0.875
@@ -153,14 +151,14 @@ passives:
 
 # 2 x Ferite Bead 
   other.FB8.600@100MHz:
-    category: active  # Ferite Bead 
-    type: active_generic
+    category: other  # Ferite Bead 
+    type: passive_generic
     weight: 2.01282E-06 kg 
     quantity: 1
 
   other.FB9.600@100MHz:
-      category: active  # Ferite Bead 
-      type: active_generic
+      category: other  # Ferite Bead 
+      type: passive_generic
       weight: 3.50117E-05 kg 
       quantity: 1
 
