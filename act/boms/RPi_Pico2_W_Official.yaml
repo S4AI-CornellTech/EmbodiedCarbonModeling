@@ -5,8 +5,8 @@ silicon:
  # RPi Pico W Official system with 6 ICs, 1 PCB, 41 Capacitors, 2 Diodes, 2 Ferite Beads, 1 I/O Expander Interface, 9 Connectors, 3 Inductors, 1 Semiconductor, 20 Resistors, 1 Switch, 1 Shield Can Interface
  # BoM was directly given by Raspberry Pi
   # 6 x ICs
-  U1.RP2040:
-    area: 2.71 mm2
+  U1.RP2350: 
+    area: 5.3 mm2 # https://www.raspberrypi.com/news/raspberry-pi-pico-2-our-new-5-microcontroller-board-on-sale-now/
     process: 45nm 
     n_ics: 1
     fab_yield: 0.875
@@ -50,11 +50,11 @@ materials:
     quantity: 1
 
 # 6 x metal/bronze as Connectors
-  connector.TP1.SQ1P5MM: # TP1,TP2,TP3,TP4,TP5,TP6
+  connector.TP1.SQ1P5MM: # TP1,TP2,TP3,TP4,TP5,TP6,TP7,TP8,TP9
     category: bronze
     type: bronze
     weight: 0.000122328 kg
-    quantity: 6
+    quantity: 9
 
 passives:
 # 5 x Capacitors
@@ -63,19 +63,24 @@ passives:
     type: "0805"
     quantity: 3
   
-  capacitor.C4.100n: # C4,C5,C6,C7,C8,C9,C10,C11,C15,C20,C251,C255,C256
+  capacitor.C4.100n: # C4,C5,C6,C7,C8,C9,C10,C11,C12,C14,C15,C20,C251,C255,C256
     category: capacitor
     type: "0603"
-    quantity: 13
+    quantity: 15
     
-  capacitor.C12.2.2u:  # C12,C13,C14,C18,C246,C248
+  capacitor.C12.2.2u:  # C13,C18,C246,C274,C248
     category: capacitor
     type: "0402"
-    quantity: 6
+    quantity: 5
     
   capacitor.C16.15p:  #C16, C17  
     category: capacitor
     type: "0603"
+    quantity: 2
+
+  capacitor.C19.10u:  #C19, C22 
+    category: capacitor
+    type: "0603" 
     quantity: 2
   
   capacitor.C240.4.7u: # C240,C241,C243
@@ -210,6 +215,11 @@ passives:
       type: "0603"
       quantity: 2
 
+  resistor.R17.27R:  # R17, R18, R19
+      category: resistor
+      type: "0603"
+      quantity: 3
+
   resistor.R21.560K:  
       category: resistor
       type: "0603"
@@ -258,6 +268,12 @@ passives:
   inductor.L1.1u:
     category: inductor
     weight: 3.20066E-05 kg
+    type: weight_based
+    quantity: 1
+
+  inductor.L2.4.7u: # https://au.element14.com/bourns/srp2010dpa-4r7m/power-inductor-4-7uh-shielded/dp/3942173
+    category: inductor
+    weight: 0.0008 kg 
     type: weight_based
     quantity: 1
 
