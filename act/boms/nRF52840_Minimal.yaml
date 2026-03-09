@@ -3,10 +3,10 @@ description: Materials model for nRF52840 Minimal device,
   based on BOM table with capacitors, inductor, timing device, and PCB
 
 silicon:
-  # nRF52840 SoC (Nordic Semiconductor, 180nm process - using closest supported node: 130nm)
+  # nRF52840 SoC (Nordic Semiconductor, 180nm process)
   U1.nRF52840:
     area: 24.598 mm2
-    process: 130nm
+    process: 180nm
     n_ics: 1
     fab_yield: 0.875
     gpa: 95

@@ -1,7 +1,7 @@
 # Fab energy costs by die unit area as per Table 1 in ACT paper
-"130nm": 0.03 kWh / cm2   
-"90nm": 0.03 kWh / cm2   
-"65nm" : 0.03 kWh / cm2   
+"180nm": 0.4 kWh / cm2
+"130nm": 0.3 kWh / cm2
+"65nm" : 0.3 kWh / cm2
 "45nm" : 0.4 kWh / cm2
 "28nm" : 0.90 kWh / cm2
 "20nm" : 1.200 kWh / cm2
