@@ -10,7 +10,7 @@ silicon:
     n_ics: 1
     fab_yield: 0.875
     gpa: 95
-    fab_ci: coal
+    fab_ci: world
 
 materials:
   # 1 x PCB (766.5216 sq mm, 2 layers, 1.6 mm thick)
