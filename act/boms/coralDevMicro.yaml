@@ -1,0 +1,311 @@
+name: Coral Dev Micro
+description: Materials model for Google Coral Dev Micro,
+  based on BoM CSV and IC datasheet information
+
+silicon:
+  # U5 - MIMXRT1176CVM8A ARM Cortex-M4/M7 processor, BGA-289, 14x14mm, 28nm
+  # NXP uses TSMC for some products but foundry unconfirmed for this chip; die area estimated
+  U5.MIMXRT1176CVM8A:
+    area: 35.0 mm2      # estimated: dual-core crossover MCU at 28nm, ~2-3x RT1060 (~12mm2)
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  # U23 - TPU module (Edge TPU), 15x10mm, 16nm
+  # Process node and foundry unconfirmed; die area estimated for a 2W inference accelerator
+  U23.TPU:
+    area: 30.0 mm2      
+    process: 14nm   # proximate for 16nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  # U20 - PTN5150AHXMP USB-C Host Controller, X2QFN-12, 1.6x1.6mm
+  # Simple CC logic chip; NXP datasheet does not disclose process, estimated 180nm BCD
+  U20.PTN5150AHXMP:
+    area: 1.285 mm2     # die size from IC table
+    process: 180nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  # U17 - MT29F1G01ABBFDWB NAND Flash 1Gb, UDFN-8
+  # Micron manufactures in own fabs (Idaho, Japan, Singapore)
+  U17.MT29F1G01ABBFDWB:
+    model: flash
+    process: nand_30nm
+    n_ics: 1
+    capacity: 128 MB    # 1Gbit = 128MB
+
+  # U18 - MT48H32M16LFB4 DRAM 512Mb, VFBGA-54
+  # MT48H is first-gen Mobile LPDDR1 (~2009-2011 era); using ddr3_50nm as closest available key
+  U18.MT48H32M16LFB4:
+    model: dram
+    process: ddr3_50nm
+    n_ics: 1
+    capacity: 64 MB     # 512Mbit = 64MB
+
+  # U6 - A7101CHUK Security/Auth Microcontroller, WLCSP-12, 4x4mm, 28nm
+  # Manufacturer/foundry unconfirmed
+  U6.A7101CHUK:
+    area: 5.044 mm2     # die size from IC table (4x4mm package, ratio ~0.315)
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  # U1 - DA9061 Power Management IC, 40QFN, 6x6mm
+  # Dialog Semiconductor confirmed TSMC partnership for PMIC BCD process at 0.25um (250nm)
+  # DA9061 is a PMIC likely on similar BCD node; using 180nm as closest available
+  U1.DA9061:
+    area: 18.072 mm2    # die size from IC table
+    process: 180nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: taiwan
+
+  # U22 - NCP170ASN180T2G LDO 1.8V, TSOP-5, 1x1mm
+  # onsemi CMOS LDO; typical process for this family is 180nm, not 28nm
+  U22.NCP170ASN180T2G:
+    area: 0.698 mm2     # die size from IC table
+    process: 180nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  # U2 - TCR2LN33 LDO 3.3V, SDFN-4, 0.8x0.8mm
+  # Toshiba TCR-series CMOS LDO; typical process for this family is 180nm
+  U2.TCR2LN33:
+    area: 0.213 mm2     # die size from IC table
+    process: 180nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  # U21 - SIP32408DNP High-side switch, TDFN-4, 1.2x1.6mm
+  # Vishay high-side switch; typical BCD process estimated 180nm
+  U21.SIP32408DNP:
+    area: 0.640 mm2     # die size from IC table
+    process: 180nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  # U4 - 74AXP1T34GMH Logic translator, XSON-6, 1x1.45mm
+  # NXP small logic gate; simple translator likely 130nm not 28nm
+  U4.74AXP1T34GMH:
+    area: 1.013 mm2     # die size from IC table
+    process: 130nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  # U3 - SN74LVC1G126DRYR Logic buffer, UFDFN-6, 1x1.45mm
+  # TI small logic gate; simple buffer likely 130nm not 28nm
+  U3.SN74LVC1G126DRYR:
+    area: 0.483 mm2     # die size from IC table
+    process: 130nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  # U10 - SPST switch logic, SOT833-1, 1x1.95mm
+  # NXP small logic switch; estimated 130nm
+  U10.SPST_SOT833:
+    area: 1.362 mm2     # die size from IC table
+    process: 130nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  # U13 - SPST switch logic, SOT833-1, 1x1.95mm
+  # NXP small logic switch; estimated 130nm
+  U13.SPST_SOT833:
+    area: 1.362 mm2
+    process: 130nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  # U14 - SPST switch logic, SOT833-1, 1x1.95mm
+  # NXP small logic switch; estimated 130nm
+  U14.SPST_SOT833:
+    area: 1.362 mm2
+    process: 130nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+materials:
+  # PCB - 1950 mm2, 4 layers, 1.6mm thickness
+  pcb:
+    category: pcb
+    area: 19.50 cm2
+    layers: 4
+    thickness: 1.6 mm
+
+passives:
+  # === Capacitors ===
+  capacitor.C_0201.100n:  # 0201 package capacitors (96 total)
+    category: capacitor
+    type: "0201"
+    quantity: 96
+
+  capacitor.C_0402.1u:    # 0402 package capacitors (16 total)
+    category: capacitor
+    type: "0402"
+    quantity: 16
+
+  capacitor.C_0603:       # 0603 package capacitors (11 total)
+    category: capacitor
+    type: "0603"
+    quantity: 11
+
+  # === Resistors ===
+  resistor.R_0201:        # 0201 package resistors (83 total)
+    category: resistor
+    type: "0201"
+    quantity: 83
+
+  resistor.R_0402:        # 0402 package resistors (11 total)
+    category: resistor
+    type: "0402"
+    quantity: 11
+
+  resistor.R_0603:        # 0603 package resistors (3 total)
+    category: resistor
+    type: "0603"
+    quantity: 3
+
+  resistor.R_0805:        # 0805 package resistors (1 total)
+    category: resistor
+    type: "0805"
+    quantity: 1
+
+  # === Diodes ===
+  diode.ESD1.TVS:         # ESD1, ESD2 - TVS diodes
+    category: diode
+    type: "glass_smd"
+    weight: 0.0000760 kg
+    quantity: 2
+
+  diode.D4.Schottky_SOD123:  # D4 - Schottky SOD-123F
+    category: diode
+    type: "glass_smd"
+    weight: 0.0000300 kg
+    quantity: 1
+
+  diode.D1.Schottky_0402:    # D1, D2, D3, D5, D6 - Schottky 0402
+    category: diode
+    type: "glass_smd"
+    weight: 0.00000099 kg
+    quantity: 5
+
+  diode.LED2.Green:           # LED2, LED3 - Green LEDs 0603
+    category: diode
+    type: "glass_smd"
+    weight: 0.00000159 kg
+    quantity: 2
+
+  diode.LED4.Orange:          # LED4 - Orange LED 0603
+    category: diode
+    type: "glass_smd"
+    weight: 0.0000260 kg
+    quantity: 1
+
+  diode.LED5.White:           # LED5 - White LED 0603
+    category: diode
+    type: "glass_smd"
+    weight: 0.0000210 kg
+    quantity: 1
+
+  diode.D31.TVS_SOD923:       # D31 - TVS SOD-923
+    category: diode
+    type: "glass_smd"
+    weight: 0.0000110 kg
+    quantity: 1
+
+  # === Inductors ===
+  inductor.L1.1u:             # L1, L2 - 1uH power inductors, weight-based
+    category: inductor
+    type: weight_based
+    weight: 0.0000180 kg
+    quantity: 2
+
+  inductor.L15.4u7:           # L15 - 4.7uH wirewound
+    category: inductor
+    type: weight_based
+    weight: 0.000388 kg
+    quantity: 1
+
+  inductor.L7.choke_0805:     # L7 - 0805 choke/ferrite
+    category: inductor
+    type: "0805"
+    quantity: 1
+
+  # === Ferrite Beads ===
+  other.FB1.120ohm:           # FB1-FB6 - 120 ohm @ 100MHz, 0402
+    category: other
+    type: passive_generic
+    weight: 0.0000120 kg
+    quantity: 6
+
+  # === Connectors ===
+  connector.J5.Header2x50:    # J5, J6 - 2x50 0.4mm pitch headers
+    category: connector
+    type: peripheral
+    weight: 0.0000450 kg
+    quantity: 2
+
+  connector.J8.USB_C:         # J8 - USB-C receptacle
+    category: connector
+    type: peripheral
+    weight: 0.001361 kg
+    quantity: 1
+
+  # === Switches ===
+  switch.SW3.tact_edge:       # SW3 - edge mount tactile
+    category: switch
+    type: generic
+    weight: 0.000758 kg
+    quantity: 1
+
+  switch.SW2.tact_smd:        # SW2 - SMD tactile
+    category: switch
+    type: generic
+    weight: 0.000200 kg
+    quantity: 1
+
+  # === Transistors (MOSFETs) ===
+  active.Q1.MOSFET_N:         # Q1, Q2, Q3, Q4, Q10 - N-ch MOSFETs
+    category: active
+    type: transistor_mosfet
+    weight: 0.00000099 kg
+    quantity: 5
+
+  # === Timing / Crystals ===
+  active.X1.24MHz:            # X1 - 24MHz crystal
+    category: active
+    type: active_generic
+    weight: 0.00000689 kg
+    quantity: 1
+
+  active.X2.32k768:           # X2 - 32.768kHz crystal
+    category: active
+    type: active_generic
+    weight: 0.0000160 kg
+    quantity: 1
