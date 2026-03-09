@@ -1,0 +1,143 @@
+name: STM32 Blackpill
+description: Materials model for STM32F411 Blackpill,
+  based on BoM and datasheet information
+
+silicon:
+  # U1 - STM32F411CEU6 Microcontroller, UFQFPN-48, 7x7mm, 90nm
+  U1.STM32F411CEU6:
+    area: 16.33 mm2  
+    process: 90nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: taiwan
+
+  # U2 - 3.3V LDO Voltage Regulator, TO-263-5
+  U2.LDO_3V3:
+    area: 12.73 mm2   
+    process: 130nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: taiwan
+
+  # U3 - W25Q32JVSSIQ Serial NOR Flash, SOIC-8, 32Mbit
+  U3.W25Q32JVSSIQ:
+    model: flash
+    process: nand_30nm
+    n_ics: 1
+    capacity: 4 MB  
+
+materials:
+  # PCB - 1113 mm2, 2 layers, 1.6mm thickness
+  pcb:
+    category: pcb
+    area: 11.13 cm2
+    layers: 2
+    thickness: 1.6 mm
+
+passives:
+  # Capacitors
+  capacitor.C1.1u:  # C1, C2 - 1.0uF, 0603
+    category: capacitor
+    type: "0603"
+    quantity: 2
+
+  capacitor.C3.12p:  # C3, C4 - 12pF, 0603
+    category: capacitor
+    type: "0603"
+    quantity: 2
+
+  capacitor.C5.4p3:  # C5, C6 - 4.3pF, 0603
+    category: capacitor
+    type: "0603"
+    quantity: 2
+
+  capacitor.C7.100n:  # C7, C9, C10, C11, C12, C13, C14, C16 - 100nF, 0603
+    category: capacitor
+    type: "0603"
+    quantity: 7
+
+  capacitor.C8.2u2:  # C8 - 2.2uF, 0603
+    category: capacitor
+    type: "0603"
+    quantity: 1
+
+  capacitor.C15.100n:  # C15 - 0.1uF, 0603
+    category: capacitor
+    type: "0603"
+    quantity: 1
+
+  # Resistors
+  resistor.R2.5K1:  # R2, R8 - 5.1kΩ, 0603
+    category: resistor
+    type: "0603"
+    quantity: 2
+
+  resistor.R5.10K:  # R5, R6, R7, R9 - 10kΩ, 0603
+    category: resistor
+    type: "0603"
+    quantity: 4
+
+  resistor.R3.1K:  # R3 - 1kΩ, 0603
+    category: resistor
+    type: "0603"
+    quantity: 1
+
+  # Diodes
+  diode.D1.BAT54C:  # D1 - BAT54C Schottky diode, 0603
+    category: diode
+    type: "glass_smd"
+    weight: 0.0000390 kg
+    quantity: 1
+
+  diode.D3.LED_Red:  # D3 - Red LED, 0603
+    category: diode
+    type: "glass_smd"
+    weight: 0.0000250 kg
+    quantity: 1
+
+  # Inductor
+  inductor.L1.10u:  # L1 - 10uH, 0603
+    category: inductor
+    type: "0603"
+    quantity: 1
+
+  # Connectors
+  connector.J1.USB_C:  # J1 - USB Type-C
+    category: connector
+    type: peripheral
+    weight: 0.000284 kg
+    quantity: 1
+
+  connector.P1.Header20:  # P1, P2 - 20-pin headers
+    category: connector
+    type: peripheral
+    weight: 0.000356 kg
+    quantity: 2
+
+  connector.P3.Header4:  # P3 - 4-pin header
+    category: connector
+    type: peripheral
+    weight: 0.000356 kg
+    quantity: 1
+
+  # Switches
+  switch.SW1.tactile:  # SW1, SW2 - 3x4 tactile switches
+    category: switch
+    type: generic
+    weight: 0.001500 kg
+    quantity: 2
+
+  # Crystals (active)
+  active.Y1.25MHz:  # Y1 - 25MHz crystal
+    category: active
+    type: active_generic
+    weight: 0.0000440 kg
+    quantity: 1
+
+  active.Y2.32k768:  # Y2 - 32.768kHz crystal
+    category: active
+    type: active_generic
+    weight: 0.0000440 kg
+    quantity: 1
