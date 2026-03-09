@@ -24,6 +24,7 @@ DEFAULT_EPA_CONFIG = f"{ACT_ROOT}/models/logic/epa.yaml"
 DEFAULT_MATERIALS_CONFIG = f"{ACT_ROOT}/models/logic/materials.yaml"
 DEFAULT_GPA95_CONFIG = f"{ACT_ROOT}/models/logic/gpa_95.yaml"
 DEFAULT_GPA99_CONFIG = f"{ACT_ROOT}/models/logic/gpa_99.yaml"
+DEFAULT_WORLD_CPA_CONFIG = f"{ACT_ROOT}/models/logic/world_cpa.yaml"
 
 
 class LogicModel:
@@ -43,6 +44,7 @@ class LogicModel:
         materials_config=DEFAULT_MATERIALS_CONFIG,
         gpa95_file=DEFAULT_GPA95_CONFIG,
         gpa99_file=DEFAULT_GPA99_CONFIG,
+        world_cpa_file=DEFAULT_WORLD_CPA_CONFIG,
     ) -> None:
         """
         Initializes a LogicModel instance.
@@ -52,6 +54,7 @@ class LogicModel:
             materials_config (str, optional): The path to the materials configuration file. Defaults to DEFAULT_MATERIALS_CONFIG.
             gpa95_file (str, optional): The path to the GPA 95 configuration file. Defaults to DEFAULT_GPA95_CONFIG.
             gpa99_file (str, optional): The path to the GPA 99 configuration file. Defaults to DEFAULT_GPA99_CONFIG.
+            world_cpa_file (str, optional): The path to the world CPA lookup table. Defaults to DEFAULT_WORLD_CPA_CONFIG.
         """
         # energy per unit area
         with open(epa_file) as f:
@@ -89,6 +92,13 @@ class LogicModel:
 
         # load the carbon intensity model by source/location
         self.ci_model = load_ci_model()
+
+        # pre-computed Total Carbon (g CO2eq / mm2) using World average CI
+        with open(world_cpa_file) as f:
+            self.world_cpa_model = {
+                LogicProcess(k): units(v)
+                for k, v in yaml.load(f, Loader=yaml.FullLoader).items()
+            }
 
     def get_cpa(
         self,
@@ -160,6 +170,13 @@ class LogicModel:
         """
         assert area.check(mm2)
         """Query the model to get the carbon impact results"""
+
+        # Direct lookup: die_area_mm2 * Total Carbon (g CO2eq / mm2) World
+        if fab_ci is EnergyLocation.WORLD and logic_process in self.world_cpa_model:
+            cpa = self.world_cpa_model[logic_process]
+            carbon = Carbon(area * cpa, SourceType.FABRICATION)
+            return carbon
+
         if logic_process not in self.epa_model:
             log.error(
                 f"Logic process {logic_process} not found in EPA model {self.epa_model}."
