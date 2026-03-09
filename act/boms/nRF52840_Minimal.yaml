@@ -1,0 +1,76 @@
+name: nRF52840 Minimal Materials Model
+description: Materials model for nRF52840 Minimal device,
+  based on BOM table with capacitors, inductor, timing device, and PCB
+
+silicon:
+  # nRF52840 SoC (Nordic Semiconductor, 180nm process - using closest supported node: 130nm)
+  U1.nRF52840:
+    area: 24.598 mm2
+    process: 130nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: coal
+
+materials:
+  # 1 x PCB (766.5216 sq mm, 2 layers, 1.6 mm thick)
+  pcb:
+    category: pcb
+    area: 7.665216 cm2
+    layers: 2
+    thickness: 1.6 mm
+
+passives:
+  # Capacitors
+  capacitor.C1.12pF: # C1, C2, C17, C18
+    category: capacitor
+    type: "0402"
+    quantity: 4
+
+  capacitor.C3.1pF: # C3, C4
+    category: capacitor
+    type: "0402"
+    quantity: 2
+
+  capacitor.C5.100nF: # C5, C7, C8, C12
+    category: capacitor
+    type: "0402"
+    quantity: 4
+
+  capacitor.C6.4.7uF: # C6
+    category: capacitor
+    type: "0603"
+    quantity: 1
+
+  capacitor.C9.820pF: # C9
+    category: capacitor
+    type: "0402"
+    quantity: 1
+
+  capacitor.C10.NC: # C10, C13, C22 - Not Connected / not fitted
+    category: capacitor
+    type: "0402"
+    quantity: 3
+
+  capacitor.C11.100pF: # C11
+    category: capacitor
+    type: "0402"
+    quantity: 1
+
+  capacitor.C14.1uF: # C14, C15
+    category: capacitor
+    type: "0603"
+    quantity: 2
+
+  # Inductor
+  inductor.L1.3.9nH: # L1
+    category: inductor
+    type: "0402"
+    quantity: 1
+
+  # Timing Device
+  active.Y1.ABM8-272-T3: # Y1 - Crystal Oscillator, SMD_3225, P/N: 403C11A12M00000
+    category: active
+    type: active_generic
+    weight: 0.000564 kg
+    quantity: 1
