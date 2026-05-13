@@ -5,7 +5,7 @@ description: Materials model for Raspberry Pi Pico, IC silicon only,
 silicon:
   soc.RP2040CT:
     area: 27.1 mm2
-    process: 40nm
+    process: 45nm
     n_ics: 1
     fab_yield: 0.875
     gpa: 95
@@ -13,7 +13,7 @@ silicon:
 
   soc.RT6150B_33GQW:
     area: 2.53 mm2
-    process: 40nm
+    process: 45nm
     n_ics: 1
     fab_yield: 0.875
     gpa: 95
@@ -21,7 +21,7 @@ silicon:
 
   soc.W25Q16JVUXIQ:
     area: 2.28 mm2
-    process: 40nm
+    process: 45nm
     n_ics: 1
     fab_yield: 0.875
     gpa: 95

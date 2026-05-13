@@ -93,7 +93,7 @@ silicon:
 
   soc.DA9121_B1OZ2:
     area: 0.6 mm2
-    process: 40nm
+    process: 45nm
     n_ics: 1
     fab_yield: 0.875
     gpa: 95

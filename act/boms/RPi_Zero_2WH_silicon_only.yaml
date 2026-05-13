@@ -5,7 +5,7 @@ description: Materials model for Raspberry Pi Zero 2WH, IC silicon only,
 silicon:
   soc.RP3A0:
     area: 53.95 mm2
-    process: 40nm
+    process: 45nm
     n_ics: 1
     fab_yield: 0.875
     gpa: 95
@@ -13,7 +13,7 @@ silicon:
 
   soc.PAM2306AYPKE:
     area: 9.61 mm2
-    process: 40nm
+    process: 45nm
     n_ics: 1
     fab_yield: 0.875
     gpa: 95
@@ -21,7 +21,7 @@ silicon:
 
   soc.RT8088AWSC:
     area: 2.76 mm2
-    process: 40nm
+    process: 45nm
     n_ics: 1
     fab_yield: 0.875
     gpa: 95
@@ -29,7 +29,7 @@ silicon:
 
   soc.RT9081A_1BGQZA:
     area: 1.44 mm2
-    process: 40nm
+    process: 45nm
     n_ics: 1
     fab_yield: 0.875
     gpa: 95
