@@ -1,0 +1,84 @@
+name: ICs RPi CM4 Materials Model
+description: Materials model for Raspberry Pi CM4, IC silicon only,
+  based on BOM data from EmbodiedCarbonModeling project.
+
+silicon:
+  soc.BCM2711ZPKFSB06C0TT:
+    area: 25 mm2
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.MxL7704_PQB_R:
+    area: 4.68 mm2
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.PI4IOE5V6408ZTAEX:
+    area: 6 mm2
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.W25X40CLUXIG:
+    area: 2.28 mm2
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.DA9121_B1OZ2:
+    area: 2.4 mm2
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.HDMI05_CL02F3:
+    area: 1.21 mm2
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.K4FCE3Q4HM_NGCJT00:
+    area: 43.7 mm2
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.KLMBG2JETD_B041T03:
+    area: 122 mm2
+    process: 14nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.BCM54210PEB1MLG:
+    area: 1 mm2
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.SKY13351_378LF:
+    area: 1 mm2
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world

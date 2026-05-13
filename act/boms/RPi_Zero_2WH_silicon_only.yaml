@@ -1,0 +1,36 @@
+name: ICs RPi Zero 2WH Materials Model
+description: Materials model for Raspberry Pi Zero 2WH, IC silicon only,
+  based on BOM data from EmbodiedCarbonModeling project.
+
+silicon:
+  soc.RP3A0:
+    area: 53.95 mm2
+    process: 40nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.PAM2306AYPKE:
+    area: 9.61 mm2
+    process: 40nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.RT8088AWSC:
+    area: 2.76 mm2
+    process: 40nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.RT9081A_1BGQZA:
+    area: 1.44 mm2
+    process: 40nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world

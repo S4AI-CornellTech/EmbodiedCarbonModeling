@@ -1,0 +1,28 @@
+name: ICs RPi Pico Materials Model
+description: Materials model for Raspberry Pi Pico, IC silicon only,
+  based on BOM data from EmbodiedCarbonModeling project.
+
+silicon:
+  soc.RP2040CT:
+    area: 27.1 mm2
+    process: 40nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.RT6150B_33GQW:
+    area: 2.53 mm2
+    process: 40nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.W25Q16JVUXIQ:
+    area: 2.28 mm2
+    process: 40nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world

@@ -1,0 +1,100 @@
+name: ICs RPi POE Hat Materials Model
+description: Materials model for Raspberry Pi POE+ Hat, IC silicon only,
+  based on BOM data from EmbodiedCarbonModeling project.
+
+silicon:
+  soc.TLV431AIDBZR:
+    area: 8.12 mm2
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.KJ1504Q:
+    area: 10.89 mm2
+    process: 28nm
+    n_ics: 2
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.HGN650N15S:
+    area: 2.25 mm2
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.Si7315DN:
+    area: 10.89 mm2
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.MMBT2222:
+    area: 3.77 mm2
+    process: 28nm
+    n_ics: 4
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.PD70224ILQ_TR:
+    area: 48 mm2
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.PD70201ILQ_TR:
+    area: 25 mm2
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.FOD817ASD:
+    area: 29.9 mm2
+    process: 28nm
+    n_ics: 2
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.FAN3111CSX:
+    area: 1 mm2
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.ATTINY814_SSNR:
+    area: 4.41 mm2
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.INA210BIDCKR:
+    area: 1 mm2
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.INA210BIRSWR:
+    area: 1 mm2
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
