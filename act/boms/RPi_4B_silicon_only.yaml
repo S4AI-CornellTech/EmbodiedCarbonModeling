@@ -1,0 +1,116 @@
+name: ICs RPi 4B Materials Model
+description: Materials model for Raspberry Pi 4B, IC silicon only,
+  based on BOM data from EmbodiedCarbonModeling project.
+
+silicon:
+  soc.BCM2711ZPKFSB06C0TT:
+    area: 48.75 mm2
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.FPF1320UCX:
+    area: 0.4 mm2
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.NC7WZ16P6X:
+    area: 0.7 mm2
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.PI4IOE5V6408ZTAEX:
+    area: 1.23 mm2
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.BCM54213PEB1KMLG:
+    area: 3.96 mm2
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.VL805_Q6T:
+    area: 14.44 mm2
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.SKY13351_378LF:
+    area: 0.2 mm2
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.W25X40CLUXIG:
+    area: 1.8 mm2
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.CYW43455XKUBGT:
+    area: 24.7 mm2
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.RT9742SNGV:
+    area: 0.72 mm2
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.RT9742GGJ5:
+    area: 0.72 mm2
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.DA9121_B1OZ2:
+    area: 0.6 mm2
+    process: 45nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.AP2552W8_7:
+    area: 1.42 mm2
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.DA9090_41FC2:
+    area: 10.8 mm2
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
