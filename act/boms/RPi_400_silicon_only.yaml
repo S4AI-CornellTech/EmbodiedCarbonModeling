@@ -49,60 +49,6 @@ silicon:
     n_ics: 1
     fab_yield: 0.875
     gpa: 95
-    fab_ci: wo
-
-cat > act/boms/RPi_400_silicon_only.yaml << 'EOF'
-name: ICs RPi 400 Materials Model
-description: Materials model for Raspberry Pi 400, IC silicon only,
-  based on BOM data from EmbodiedCarbonModeling project.
-
-silicon:
-  soc.BCM2711ZPKFSB06C0TT:
-    area: 25 mm2
-    process: 28nm
-    n_ics: 1
-    fab_yield: 0.875
-    gpa: 95
-    fab_ci: world
-
-  soc.MxL7704_PQB_R:
-    area: 5 mm2
-    process: 28nm
-    n_ics: 1
-    fab_yield: 0.875
-    gpa: 95
-    fab_ci: world
-
-  soc.FPF1320UCX:
-    area: 1.5 mm2
-    process: 28nm
-    n_ics: 1
-    fab_yield: 0.875
-    gpa: 95
-    fab_ci: world
-
-  soc.PI4IOE5V6408ZTAEX_13:
-    area: 4.68 mm2
-    process: 28nm
-    n_ics: 1
-    fab_yield: 0.875
-    gpa: 95
-    fab_ci: world
-
-  soc.W25X40CLUXIG:
-    area: 6 mm2
-    process: 28nm
-    n_ics: 1
-    fab_yield: 0.875
-    gpa: 95
-    fab_ci: world
-
-  soc.RT9742SNGV:
-    area: 3.76 mm2
-    process: 28nm
-    n_ics: 1
-    fab_yield: 0.875
-    gpa: 95
     fab_ci: world
 
   soc.HDMI05_CL02F3:
