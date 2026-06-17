@@ -11,33 +11,33 @@ import tempfile
 
 import pint
 import yaml
-from .core.units import *
+from act_core.units import *
 
-from .core.arg_parser import get_clean_args, get_parser
-from .core.common import *
+from act_core.arg_parser import get_clean_args, get_parser
+from act_core.common import *
 
-from .core.capacitor_model import CapacitorModel, DEFAULT_CP_CONFIG
-from .core.carbon import Carbon, SourceType
+from act_core.capacitor_model import CapacitorModel, DEFAULT_CP_CONFIG
+from act_core.carbon import Carbon, SourceType
 
-from .core.dram_model import DEFAULT_DRAM_CONFIG, DRAMModel
-from .core.hdd_model import DEFAULT_HDD_CONFIG, HDDModel
+from act_core.dram_model import DEFAULT_DRAM_CONFIG, DRAMModel
+from act_core.hdd_model import DEFAULT_HDD_CONFIG, HDDModel
 
-from .core.logger import log, setup_logger
-from .core.logic_model import LogicModel
-from .core.materials_model import DEFAULT_MATERIALS_CONFIG, MaterialsModel
-from .core.op_model import OpModel
-from .core.ssd_model import SSDModel
-from .core.bom import *
-from .core.battery_model import BatteryModel
-from .core.pcb_model import DEFAULT_PCB_MODEL_FILE, PCBModel
-from .core.connector_model import ConnectorModel, DEFAULT_CONNECTOR_MODEL_FILE
-from .core.diode_model import DiodeModel, DEFAULT_DIODE_MODEL_FILE
-from .core.switch_model import SwitchModel, DEFAULT_SWITCH_MODEL_FILE
-from .core.resistor_model import ResistorModel, DEFAULT_RESISTOR_MODEL_FILE
-from .core.inductor_model import InductorModel, DEFAULT_INDUCTOR_MODEL_FILE
-from .core.other_model import OtherModel, DEFAULT_OTHER_MODEL_FILE
-from .core.active_model import ActiveModel, DEFAULT_ACTIVE_MODEL_FILE
-from .core.utils import DEFAULT_LOCATION_CONFIG, DEFAULT_SOURCE_CONFIG
+from act_core.logger import log, setup_logger
+from act_core.logic_model import LogicModel
+from act_core.materials_model import DEFAULT_MATERIALS_CONFIG, MaterialsModel
+from act_core.op_model import OpModel
+from act_core.ssd_model import SSDModel
+from act_core.bom import *
+from act_core.battery_model import BatteryModel
+from act_core.pcb_model import DEFAULT_PCB_MODEL_FILE, PCBModel
+from act_core.connector_model import ConnectorModel, DEFAULT_CONNECTOR_MODEL_FILE
+from act_core.diode_model import DiodeModel, DEFAULT_DIODE_MODEL_FILE
+from act_core.switch_model import SwitchModel, DEFAULT_SWITCH_MODEL_FILE
+from act_core.resistor_model import ResistorModel, DEFAULT_RESISTOR_MODEL_FILE
+from act_core.inductor_model import InductorModel, DEFAULT_INDUCTOR_MODEL_FILE
+from act_core.other_model import OtherModel, DEFAULT_OTHER_MODEL_FILE
+from act_core.active_model import ActiveModel, DEFAULT_ACTIVE_MODEL_FILE
+from act_core.utils import DEFAULT_LOCATION_CONFIG, DEFAULT_SOURCE_CONFIG
 
 
 class ACTModel:
@@ -99,9 +99,9 @@ class ACTModel:
         self.op_model = OpModel(
             loc_ci_config=loc_ci_config, src_ci_config=src_ci_config
         )
-        self.cap_model = CapacitorModel(model_file=cap_config)
+        self.cap_model = CapacitorModel(model_file=cap_config, source_type=SourceType.CAPACITOR)
         self.materials_model = MaterialsModel(model_file=materials_config)
-        self.pcb_model = PCBModel(model_file=pcb_config)
+        self.pcb_model = PCBModel(model_file=pcb_config, source_type=SourceType.PCB)
         self.connector_model = ConnectorModel(model_file=connector_config) 
         self.diode_model = DiodeModel(model_file=diode_config)
         self.resistor_model = ResistorModel(model_file=resistor_config)
@@ -199,6 +199,7 @@ class ACTModel:
                     area=silicon_data.area,
                     fab_yield=fab_yield,
                     n_ics=n_ics,
+                    add_ic_packaging=False,
                     gpa=gpa,
                     fab_ci=fab_ci,
                 )
@@ -208,6 +209,7 @@ class ACTModel:
                     process=silicon_data.process,
                     fab_yield=fab_yield,
                     n_ics=n_ics,
+                    add_ic_packaging=False,
                 )
             elif mtype is ModelType.FLASH:
                 si_carbon = self.ssd_model.get_carbon(
@@ -215,6 +217,7 @@ class ACTModel:
                     process=silicon_data.process,
                     fab_yield=fab_yield,
                     n_ics=n_ics,
+                    add_ic_packaging=False,
                 )
             elif mtype is ModelType.HDD:
                 si_carbon = self.hdd_model.get_carbon(
@@ -222,6 +225,7 @@ class ACTModel:
                     process=silicon_data.process,
                     fab_yield=fab_yield,
                     n_ics=n_ics,
+                    add_ic_packaging=False,
                 )
             elif mtype is ModelType.MANUAL:
                 si_carbon = Carbon(
