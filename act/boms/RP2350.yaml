@@ -21,11 +21,11 @@ silicon:
     gpa: 95
     fab_ci: taiwan
 
-  U3.W25Q16JVUXIQ: # Serial NOR Flash, QSPI, 16MBit, 8-pin USON 2x3mm 133MHz
+  U3.W25Q16JVUXIQ: # Serial NOR Flash, QSPI, 16MBit, 8-pin USON 2x3mm 133MHz (4MB version)
     model: flash
     process: nand_30nm
     n_ics: 1
-    capacity: 2 GB
+    capacity: 4 MB
   
   U19.CYW43439KUBG: 
     area: 9.7349 mm2
