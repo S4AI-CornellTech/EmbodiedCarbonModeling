@@ -25,7 +25,7 @@ silicon:
     model: flash
     process: nand_30nm
     n_ics: 1
-    capacity: 2 GB
+    capacity: 2 MB
   
   U19.CYW43439KUBG: 
     area: 9.7349 mm2
