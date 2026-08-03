@@ -59,13 +59,11 @@ silicon:
     gpa: 95
     fab_ci: world
 
-  soc.W25X40CLUXIG:
-    area: 1.8 mm2
-    process: 28nm
+  U7.W25X40CLUXIG:
+    model: flash
+    process: nand_30nm
     n_ics: 1
-    fab_yield: 0.875
-    gpa: 95
-    fab_ci: world
+    capacity: 0.5 MB
 
   soc.CYW43455XKUBGT:
     area: 24.7 mm2
@@ -99,7 +97,7 @@ silicon:
     gpa: 95
     fab_ci: world
 
-  soc.AP2552W8_7:
+  soc.AP2552W6_7:
     area: 1.42 mm2
     process: 28nm
     n_ics: 1
@@ -114,3 +112,41 @@ silicon:
     fab_yield: 0.875
     gpa: 95
     fab_ci: world
+
+  soc.CDDFN10_3324P_13_U18:
+    area: 0.58 mm2
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.CDDFN10_3324P_13_U19:
+    area: 0.58 mm2
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.HDMI05_CL02F3_U9:
+    area: 1 mm2
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  soc.HDMI05_CL02F3_U10:
+    area: 1 mm2
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  U17.K4F8E3S4HD_MGCLT00:
+    model: dram
+    process: ddr4_10nm
+    n_ics: 1
+    capacity: 1 GB

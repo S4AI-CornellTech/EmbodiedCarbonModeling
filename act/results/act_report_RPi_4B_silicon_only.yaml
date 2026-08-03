@@ -1,0 +1,57 @@
+cl_args: /Users/ariel/Documents/GitHub/EmbodiedCarbonModeling/act/act_model.py -m
+  act/boms/RPi_4B_silicon_only.yaml -o act/results/
+query_settings:
+  duty_cycle: '1.0'
+  hw_lifetime: 2 year
+  op_ci: usa
+  op_power: 0 milliwatt
+report_generated: 05/22/2026 12:41:51
+result_by_category:
+  ACTIVE: 0 kilogram
+  CAPACITOR: 0 kilogram
+  CONNECTOR: 0 kilogram
+  DIODE: 0 kilogram
+  ENCLOSURE: 0 kilogram
+  FABRICATION: 1.18176 kilogram
+  INDUCTOR: 0 kilogram
+  MATERIALS: 0 kilogram
+  OPERATION: 0 kilogram
+  OTHER: 0 kilogram
+  PACKAGING: 0 kilogram
+  PASSIVES: 0 kilogram
+  PCB: 0 kilogram
+  RESISTOR: 0 kilogram
+  SWITCH: 0 kilogram
+result_by_device:
+  materials_results: {}
+  passives_results: {}
+  silicon_results:
+    soc.AP2552W8_7:
+      FABRICATION: 0.0152 kilogram
+    soc.BCM2711ZPKFSB06C0TT:
+      FABRICATION: 0.52182 kilogram
+    soc.BCM54213PEB1KMLG:
+      FABRICATION: 0.042388 kilogram
+    soc.CYW43455XKUBGT:
+      FABRICATION: 0.264389 kilogram
+    soc.DA9090_41FC2:
+      FABRICATION: 0.115603 kilogram
+    soc.DA9121_B1OZ2:
+      FABRICATION: 0.006032 kilogram
+    soc.FPF1320UCX:
+      FABRICATION: 0.004282 kilogram
+    soc.NC7WZ16P6X:
+      FABRICATION: 0.007493 kilogram
+    soc.PI4IOE5V6408ZTAEX:
+      FABRICATION: 0.013166 kilogram
+    soc.RT9742GGJ5:
+      FABRICATION: 0.007707 kilogram
+    soc.RT9742SNGV:
+      FABRICATION: 0.007707 kilogram
+    soc.SKY13351_378LF:
+      FABRICATION: 0.002141 kilogram
+    soc.VL805_Q6T:
+      FABRICATION: 0.154566 kilogram
+    soc.W25X40CLUXIG:
+      FABRICATION: 0.019267 kilogram
+total_carbon: 1.18176 kilogram
