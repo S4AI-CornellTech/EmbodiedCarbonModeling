@@ -12,7 +12,7 @@ silicon:
     fab_ci: world
 
   soc.MxL7704_PQB_R:
-    area: 5 mm2
+    area: 4.68 mm2
     process: 28nm
     n_ics: 1
     fab_yield: 0.875
@@ -33,7 +33,66 @@ silicon:
     n_ics: 1
     fab_yield: 0.875
     gpa: 95
-python -m act.act_model -m act/boms/RPi_400_silicon_only.yaml --export-file act/results/RPi_400_results.txt
-cat act/results/RPi_400_results.txt
-python -m act.act_model -m act/boms/RPi_400_silicon_only.yaml --export-file act/results/RPi_400_results.txt
-cat act/results/RPi_400_results.txt
+    fab_ci: world
+
+  U7.W25X40CLUXIG:
+    model: flash
+    process: nand_30nm
+    n_ics: 1
+    capacity: 0.5 MB
+
+  U8.RT9742SNGV:
+    area: 3.760724 mm2
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  HDMI.HDMI05_CL02F3:
+    area: 1.21 mm2
+    process: 28nm
+    n_ics: 2
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  U11.BCM54213PEB1KMLG:
+    area: 36 mm2
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  U12.VL805-Q6T:
+    area: 64 mm2
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  U12.AP2552W6-7:
+    area: 5.27 mm2
+    process: 28nm
+    n_ics: 1
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  U18.CDDFN10-3324P-13:
+    area: 2.5 mm2
+    process: 28nm
+    n_ics: 2
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world
+
+  U20.RT9742GGJ5:
+    area: 5.58 mm2
+    process: 28nm
+    n_ics: 2
+    fab_yield: 0.875
+    gpa: 95
+    fab_ci: world

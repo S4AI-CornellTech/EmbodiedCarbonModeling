@@ -9,7 +9,7 @@ silicon:
     n_ics: 1
     fab_yield: 0.875
     gpa: 95
-    fab_ci: world
+    fab_ci: taiwan
 
   soc.FPF1320UCX:
     area: 0.4 mm2
@@ -28,7 +28,7 @@ silicon:
     fab_ci: world
 
   soc.PI4IOE5V6408ZTAEX:
-    area: 1.23 mm2
+    area: 1.233 mm2
     process: 28nm
     n_ics: 1
     fab_yield: 0.875
@@ -41,7 +41,7 @@ silicon:
     n_ics: 1
     fab_yield: 0.875
     gpa: 95
-    fab_ci: world
+    fab_ci: taiwan
 
   soc.VL805_Q6T:
     area: 14.44 mm2
@@ -66,12 +66,12 @@ silicon:
     capacity: 0.5 MB
 
   soc.CYW43455XKUBGT:
-    area: 24.7 mm2
+    area: 24.7237 mm2
     process: 28nm
     n_ics: 1
     fab_yield: 0.875
     gpa: 95
-    fab_ci: world
+    fab_ci: taiwan
 
   soc.RT9742SNGV:
     area: 0.72 mm2
@@ -98,7 +98,7 @@ silicon:
     fab_ci: world
 
   soc.AP2552W6_7:
-    area: 1.42 mm2
+    area: 1.424 mm2
     process: 28nm
     n_ics: 1
     fab_yield: 0.875
@@ -114,7 +114,7 @@ silicon:
     fab_ci: world
 
   soc.CDDFN10_3324P_13_U18:
-    area: 0.58 mm2
+    area: 0.575 mm2
     process: 28nm
     n_ics: 1
     fab_yield: 0.875
@@ -122,7 +122,7 @@ silicon:
     fab_ci: world
 
   soc.CDDFN10_3324P_13_U19:
-    area: 0.58 mm2
+    area: 0.575 mm2
     process: 28nm
     n_ics: 1
     fab_yield: 0.875
@@ -147,6 +147,6 @@ silicon:
 
   U17.K4F8E3S4HD_MGCLT00:
     model: dram
-    process: ddr4_10nm
+    process: lpddr4
     n_ics: 1
     capacity: 1 GB

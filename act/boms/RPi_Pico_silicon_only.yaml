@@ -9,7 +9,7 @@ silicon:
     n_ics: 1
     fab_yield: 0.875
     gpa: 95
-    fab_ci: world
+    fab_ci: taiwan
 
   soc.RT6150B_33GQW:
     area: 2.53 mm2
@@ -17,7 +17,7 @@ silicon:
     n_ics: 1
     fab_yield: 0.875
     gpa: 95
-    fab_ci: world
+    fab_ci: taiwan
 
   U3.W25Q16JVUXIQ:
     model: flash

@@ -44,14 +44,14 @@ silicon:
   soc.HDMI05_CL02F3:
     area: 1.21 mm2
     process: 28nm
-    n_ics: 1
+    n_ics: 2
     fab_yield: 0.875
     gpa: 95
     fab_ci: world
 
   U17.K4FCE3Q4HM_NGCJT00:
     model: dram
-    process: lpddr4_8nm
+    process: lpddr4
     n_ics: 1
     capacity: 8 GB
 
@@ -77,10 +77,3 @@ silicon:
     gpa: 95
     fab_ci: world
 
-  soc.BCM2711ZPKFSB06C0TT_2:
-    area: 25 mm2
-    process: 28nm
-    n_ics: 1
-    fab_yield: 0.875
-    gpa: 95
-    fab_ci: world
