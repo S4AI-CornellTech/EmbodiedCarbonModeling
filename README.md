@@ -4,20 +4,34 @@ This is the open-source repository for the embodied carbon modeling section of t
 
 The model uses the ACT carbon modeling tool as a foundation for silicon-level modeling, and incorporates additional modeling methodologies for other components described in the paper, including capacitors, resistors, inductors, PCBs, and connectors.
 
+---
+### Setup
+ 
+1. **Clone the repository** with all submodules:
+ 
+```bash
+git clone git@github.com:S4AI-CornellTech/EmbodiedCarbonModeling.git
+git checkout RPI-Silicon
+```
+ 
+2. **Install Python dependencies** using the setup script:
+ 
+```bash
+bash setup.sh
+```
+
 ### Generate Embodied Carbon Modeling Results for MicroGreen
 
 Ensure you are running commands within MicroGreen's virtual environment to satisfy all library requirements.
 ```bash
 cd "${EMBODIED_CARBON_MODELING_DIR}"
-mkdir -p outputs
-python3 -m act.act_model -m act/boms/ESP32.yaml --export-file outputs/ESP32_output
-python3 -m act.act_model -m act/boms/ESP32-C6.yaml --export-file outputs/ESP32-C6_output
-python3 -m act.act_model -m act/boms/ESP32-S3.yaml --export-file outputs/ESP32-S3_output
-python3 -m act.act_model -m act/boms/RP2040.yaml --export-file outputs/RP2040_output
-python3 -m act.act_model -m act/boms/RP2350.yaml --export-file outputs/RP2350_output
-python3 -m act.act_model -m act/boms/STM32F411.yaml --export-file outputs/STM32F411_output
-python3 -m act.act_model -m act/boms/coralDevMicro.yaml --export-file outputs/coralDevMicro_output
-python3 -m act.act_model -m act/boms/nRF52840.yaml --export-file outputs/nRF52840_output
+mkdir -p results
+python3 -m act.act_model -m act/boms/RPi_Pico_silicon_only.yaml --export-file results/RPi_Pico_silicon_only_output
+python3 -m act.act_model -m act/boms/RPi_4B_silicon_only.yaml --export-file results/RPi_4B_silicon_only_output
+python3 -m act.act_model -m act/boms/RPi_CM4_silicon_only.yaml --export-file results/RPi_CM4_silicon_only_output
+python3 -m act.act_model -m act/boms/RPi_400_silicon_only.yaml --export-file results/RPi_400_silicon_only.yaml
+python3 -m act.act_model -m act/boms/RPi_POE_Hat_silicon_only.yaml --export-file results/RPi_POE_Hat_silicon_only_output
+python3 -m act.act_model -m act/boms/RPi_Zero_2WH_silicon_only.yaml --export-file results/RPi_Zero_2WH_silicon_only_output
 ```
 
 For the full list of command-line arguments, run `python -m act.act_model --help`.
