@@ -1,0 +1,53 @@
+cl_args: /Users/kristenxchen/work/MicroGreen/MicroGreen/EmbodiedCarbonModeling/act/act_model.py
+  -m act/boms/RPi_POE_Hat_silicon_only.yaml --export-file outputs/RPi_POE_Hat_silicon_only_output
+query_settings:
+  duty_cycle: '1.0'
+  hw_lifetime: 2 year
+  op_ci: usa
+  op_power: 0 milliwatt
+report_generated: 08/04/2026 10:26:27
+result_by_category:
+  ACTIVE: 0 kilogram
+  CAPACITOR: 0 kilogram
+  CONNECTOR: 0 kilogram
+  DIODE: 0 kilogram
+  ENCLOSURE: 0 kilogram
+  FABRICATION: 2.144004 kilogram
+  INDUCTOR: 0 kilogram
+  MATERIALS: 0 kilogram
+  OPERATION: 0 kilogram
+  OTHER: 0 kilogram
+  PACKAGING: 0 kilogram
+  PASSIVES: 0 kilogram
+  PCB: 0 kilogram
+  RESISTOR: 0 kilogram
+  SWITCH: 0 kilogram
+result_by_device:
+  materials_results: {}
+  passives_results: {}
+  silicon_results:
+    soc.ATTINY814_SSNR:
+      FABRICATION: 0.047673 kilogram
+    soc.FAN3111CSX:
+      FABRICATION: 0.01081 kilogram
+    soc.FOD817ASD:
+      FABRICATION: 0.646455 kilogram
+    soc.HGN650N15S:
+      FABRICATION: 0.024323 kilogram
+    soc.INA210BIDCKR:
+      FABRICATION: 0.01081 kilogram
+    soc.INA210BIRSWR:
+      FABRICATION: 0.01081 kilogram
+    soc.KJ1504Q:
+      FABRICATION: 0.235448 kilogram
+    soc.MMBT2222:
+      FABRICATION: 0.163019 kilogram
+    soc.PD70201ILQ_TR:
+      FABRICATION: 0.270257 kilogram
+    soc.PD70224ILQ_TR:
+      FABRICATION: 0.518894 kilogram
+    soc.Si7315DN:
+      FABRICATION: 0.117724 kilogram
+    soc.TLV431AIDBZR:
+      FABRICATION: 0.08778 kilogram
+total_carbon: 2.144004 kilogram

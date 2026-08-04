@@ -1,0 +1,49 @@
+cl_args: /Users/kristenxchen/work/MicroGreen/MicroGreen/EmbodiedCarbonModeling/act/act_model.py
+  -m act/boms/RPi_CM4_silicon_only.yaml --export-file results/RPi_CM4_silicon_only_output
+query_settings:
+  duty_cycle: '1.0'
+  hw_lifetime: 2 year
+  op_ci: usa
+  op_power: 0 milliwatt
+report_generated: 08/04/2026 11:20:01
+result_by_category:
+  ACTIVE: 0 kilogram
+  CAPACITOR: 0 kilogram
+  CONNECTOR: 0 kilogram
+  DIODE: 0 kilogram
+  ENCLOSURE: 0 kilogram
+  FABRICATION: 2.032026 kilogram
+  INDUCTOR: 0 kilogram
+  MATERIALS: 0 kilogram
+  OPERATION: 0 kilogram
+  OTHER: 0 kilogram
+  PACKAGING: 0 kilogram
+  PASSIVES: 0 kilogram
+  PCB: 0 kilogram
+  RESISTOR: 0 kilogram
+  SWITCH: 0 kilogram
+result_by_device:
+  materials_results: {}
+  passives_results: {}
+  silicon_results:
+    U17.K4FCE3Q4HM_NGCJT00:
+      FABRICATION: 0.438857 kilogram
+    U21.KLMBG2JETD_B041T03:
+      FABRICATION: 1.133714 kilogram
+    U7.W25X40CLUXIG:
+      FABRICATION: 0.000018 kilogram
+    soc.BCM2711ZPKFSB06C0TT:
+      FABRICATION: 0.270257 kilogram
+    soc.BCM54210PEB1MLG:
+      FABRICATION: 0.01081 kilogram
+    soc.DA9121_B1OZ2:
+      FABRICATION: 0.025945 kilogram
+    soc.HDMI05_CL02F3:
+      FABRICATION: 0.026161 kilogram
+    soc.MxL7704_PQB_R:
+      FABRICATION: 0.050592 kilogram
+    soc.PI4IOE5V6408ZTAEX:
+      FABRICATION: 0.064862 kilogram
+    soc.SKY13351_378LF:
+      FABRICATION: 0.01081 kilogram
+total_carbon: 2.032026 kilogram
