@@ -172,10 +172,10 @@ class LogicModel:
         """Query the model to get the carbon impact results"""
 
         # Direct lookup: die_area_mm2 * Total Carbon (g CO2eq / mm2) World
-        if fab_ci is EnergyLocation.WORLD and logic_process in self.world_cpa_model:
-            cpa = self.world_cpa_model[logic_process]
-            carbon = Carbon(area * cpa, SourceType.FABRICATION)
-            return carbon
+        # if fab_ci is EnergyLocation.WORLD and logic_process in self.world_cpa_model:
+        #     cpa = self.world_cpa_model[logic_process]
+        #     carbon = Carbon(area * cpa, SourceType.FABRICATION)
+        #     return carbon
 
         if logic_process not in self.epa_model:
             log.error(
@@ -195,8 +195,8 @@ class LogicModel:
         cpa = self.get_cpa(
             logic_process=logic_process, fab_yield=fab_yield, gpa=gpa, fab_ci=fab_ci
         )
-        carbon = Carbon(area * cpa, SourceType.FABRICATION)
-        return carbon
+        carbon = Carbon(area * cpa * n_ics if n_ics > 0 else area * cpa, SourceType.FABRICATION)
+        return carbon 
 
     def get_carbon_energy(
         self, logic_process: LogicProcess, fab_ci=EnergyLocation.TAIWAN
